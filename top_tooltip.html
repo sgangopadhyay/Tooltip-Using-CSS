@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Tooltip Using HTML & CSS</title>
+    <style>
+      body{
+        padding-top: 40px;
+        
+        }
+        /* Container for our tooltip */
+        .tooltip { 
+        position: relative; 
+        display: inline-block;
+        }
+         /* This is for the tooltip text */
+        .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 100px;
+        background-color: #555;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px; /* Defines tooltip text position */
+        position: absolute;
+        z-index: 1;
+        width: 100px;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -50px;
+        } 
+        /* Makes tooltip text visible when hovered on */
+        .tooltip:hover .tooltiptext { 
+        visibility: visible;
+        }
+        .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        top: 100%; /* At the bottom of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- PROGRAM # CREATE A TOOLTIP USING HTML & CSS 
+         NAME # SUMAN GANGOPADHYAY
+         DATE # 12-August-2021
+         LANGUAGES # HTML & CSS    
+    -->
+    <span class="htmlHigh">
+      <div class="tooltip">
+        <span style="color: #8512d5 !important;"><strong>Please hover over this element</strong></span>
+        <span class="tooltiptext">
+        <span style="color: white;">I am a tooltip</span></span>
+      </div>
+  </body>
+</html>
